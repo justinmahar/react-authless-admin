@@ -9,7 +9,6 @@ import { Demo } from '../__docz__/components/Demo';
 import { AdminOnly } from '../components/AdminOnly';
 import { NonAdminOnly } from '../components/NonAdminOnly';
 import { NetlifyCMSButton } from '../components/NetlifyCMSButton';
-import { AdminToggle } from '../components/AdminToggle';
 
 # Demo
 
@@ -25,7 +24,7 @@ However, those direct links are rather convenient for admins, especially if you'
 
 ```jsx
 import * as React from 'react';
-import { useAdmin, AdminOnly, NonAdminOnly, NetlifyCMSButton, AdminToggle } from 'react-authless-admin';
+import { useAdmin, AdminOnly, NonAdminOnly, NetlifyCMSButton } from 'react-authless-admin';
 
 export function Demo() {
   const [isAdmin, setIsAdmin] = useAdmin();
@@ -62,7 +61,7 @@ export function Demo() {
           <NetlifyCMSButton collection="settings" entry="discussion-settings" adminRootPath={adminRootPath}>
             Discussion Settings
           </NetlifyCMSButton>
-          <AdminToggle enabledChildren="Logout" />
+          <button onClick={() => setIsAdmin(!isAdmin)}>Logout</button>
         </div>
       </AdminOnly>
       <NonAdminOnly>

@@ -6,13 +6,12 @@ route: /NonAdminOnly
 
 import { Playground, Props } from 'docz';
 import { NonAdminOnly } from './NonAdminOnly';
-import { AdminToggle } from './AdminToggle';
 
 <h1>NonAdminOnly</h1>
 
 ## Description
 
-A component wrapper that shows children to non-admins unless switched off site-wide by [AdminToggle](/AdminToggle) or [useAdmin](/useAdmin).
+A component wrapper that shows children to non-admins unless switched off site-wide by [useAdmin](/useAdmin).
 
 This is for static sites that want to show components for non-admins (and hide for admins) but do not have user authentication.
 
@@ -22,10 +21,9 @@ See [AdminOnly](/AdminOnly) to hide components when admin is switched off.
 
 ## Usage
 
+The following will appear empty if admin is enabled. Try disabling it via the [demo](/demo).
+
 <Playground>
-  <div>
-    <AdminToggle />
-  </div>
   <NonAdminOnly>
     <div style={{ border: 'solid 1px lightgray', padding: "10px", marginTop: "10px" }}>
       <strong>This content is only visible when admin is disabled.</strong>

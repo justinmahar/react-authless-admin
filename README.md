@@ -55,7 +55,7 @@ As an admin, when viewing your site you want to be able to easily edit this cont
 
 You could integrate with an external auth system, but there's a much simpler way.
 
-With `react-authless-admin`, you can wrap your admin-only links in [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) and they will show up site-wide when toggled by an [`AdminToggle`](https://devboldly.github.io/react-authless-admin/AdminToggle) or [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin). Similarly, you can wrap any content for non-admin users inside [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly).
+With `react-authless-admin`, you can wrap your admin-only links in [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) and they will show up site-wide when toggled by [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin). Similarly, you can wrap any content for non-admin users inside [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly).
 
 This allows you to easily control content that's useless to general users, but useful if you're an admin, without needing an auth integration. Check out the [demo](https://devboldly.github.io/react-authless-admin/demo) for an example.
 
@@ -69,14 +69,18 @@ npm i react-authless-admin
 
 - Hide content from non-admins with [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly).
 - Hide content from admins with [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly).
-- Use an [AdminToggle](https://devboldly.github.io/react-authless-admin/AdminToggle) to switch admin on and off (or [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin) for more flexibility)
+- Use the [useAdmin hook](https://devboldly.github.io/react-authless-admin/useAdmin) to switch admin on and off.
 
 ```jsx
-import { AdminOnly, NonAdminOnly, AdminToggle } from 'react-authless-admin';
+import { AdminOnly, NonAdminOnly, useAdmin } from 'react-authless-admin';
 ```
 
 ```jsx
-<div><AdminToggle /></div>
+const [isAdmin, setIsAdmin] = useAdmin();
+```
+
+```jsx
+<button onClick={() => setIsAdmin(!isAdmin)}>{ isAdmin ? 'Switch Off' : 'Switch On' }</button>
 <AdminOnly>
   <div>
     This content is only visible when admin is <strong>enabled</strong>.

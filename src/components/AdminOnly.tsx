@@ -3,7 +3,6 @@ import { useAdmin } from '../hooks/useAdmin';
 
 export interface AdminOnlyProps {
   /** Children that will only be visible when admin is enabled (via
-   * [AdminToggle](https://devboldly.github.io/react-authless-admin/AdminToggle) or
    * [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin)).
    */
   children?: React.ReactNode;
@@ -16,7 +15,7 @@ export interface AdminOnlyProps {
 /**
  * See documentation: https://devboldly.github.io/react-authless-admin/AdminOnly
  *
- * A component wrapper that hides children unless switched on site-wide by [AdminToggle](https://devboldly.github.io/react-authless-admin/AdminToggle) or [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
+ * A component wrapper that hides children unless switched on site-wide by [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
  *
  * This is for static sites that want to show components to admins ([nonsensitive only](https://devboldly.github.io/react-authless-admin/AdminOnly#security-note)) but do not have user authentication to determine who is an admin or not.
  *

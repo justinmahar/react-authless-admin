@@ -3,7 +3,6 @@ import { useAdmin } from '../../hooks/useAdmin';
 import { AdminOnly } from '../../components/AdminOnly';
 import { NonAdminOnly } from '../../components/NonAdminOnly';
 import { NetlifyCMSButton } from '../../components/NetlifyCMSButton';
-import { AdminToggle } from '../../components/AdminToggle';
 
 export function Demo(): JSX.Element {
   const [isAdmin, setIsAdmin] = useAdmin();
@@ -40,7 +39,7 @@ export function Demo(): JSX.Element {
           <NetlifyCMSButton collection="settings" entry="discussion-settings" adminRootPath={adminRootPath}>
             Discussion Settings
           </NetlifyCMSButton>
-          <AdminToggle enabledChildren="Logout" />
+          <button onClick={() => setIsAdmin(!isAdmin)}>Logout</button>
         </div>
       </AdminOnly>
       <NonAdminOnly>

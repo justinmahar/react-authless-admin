@@ -13,7 +13,7 @@ export interface NonAdminOnlyProps {
 /**
  * See documentation: https://devboldly.github.io/react-authless-admin/NonAdminOnly
  *
- * A component wrapper that shows children to non-admins unless switched off site-wide by [AdminToggle](https://devboldly.github.io/react-authless-admin/AdminToggle) or [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
+ * A component wrapper that shows children to non-admins unless switched off site-wide by the [useAdmin hook](https://devboldly.github.io/react-authless-admin/useAdmin).
  *
  * This is for static sites that want to show components for non-admins (and hide for admins) but do not have user authentication.
  *
