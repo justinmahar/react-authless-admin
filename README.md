@@ -40,12 +40,10 @@ Just wrap your admin-only content in an [AdminOnly](https://devboldly.github.io/
   - One setting to affect the whole site. Uses local storage for persistence.
 - **🙈 Cater content to both non-admins and admins**
   - Show and hide content from both types of users, simulating the feel of being logged in.
-- **📝 Netlify CMS button**
-  - Using Netlify CMS? A button is included to make linking to collections and entries easy.
 - **👩‍🎨 Admin role support**
   - Show or hide content for different admin roles using custom local storage key names.
-- **✊ Do it your way**
-  - Activate via the included toggle button, or your own way using the included hook.
+- **📝 Netlify CMS button**
+  - Using Netlify CMS? A button is included to make linking to collections and entries easy.
 
 ## Why use this?
 
