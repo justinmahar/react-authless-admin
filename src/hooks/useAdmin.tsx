@@ -2,7 +2,7 @@ import { useLocalStorageBoolean, LocalStorageItem } from 'react-use-window-local
 
 /**
  *
- * See documentation: https://devboldly.github.io/react-authless-admin/useAdmin
+ * See documentation: [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin)
  *
  * This hook can be used to enable or disable admin-only components on a static site that lacks user authentication.
  *

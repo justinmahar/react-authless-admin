@@ -13,7 +13,7 @@ export interface AdminOnlyProps {
 }
 
 /**
- * See documentation: https://devboldly.github.io/react-authless-admin/AdminOnly
+ * See documentation: [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly)
  *
  * A component wrapper that hides children unless switched on site-wide by [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
  *
