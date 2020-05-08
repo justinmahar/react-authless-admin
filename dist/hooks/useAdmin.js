@@ -15,7 +15,6 @@ var react_use_window_localstorage_1 = require("react-use-window-localstorage");
  */
 function useAdmin(localStorageKeyName) {
     var val = react_use_window_localstorage_1.useLocalStorageBoolean(typeof localStorageKeyName === 'string' ? localStorageKeyName : 'react-authless-admin', false);
-    console.log('Rendering useAdmin', val);
     return val;
 }
 exports.useAdmin = useAdmin;

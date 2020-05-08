@@ -22,7 +22,6 @@ var useAdmin_1 = require("../hooks/useAdmin");
  */
 function NonAdminOnly(props) {
     var isAdminEnabled = useAdmin_1.useAdmin(props.localStorageKeyName)[0];
-    console.log('Rendering NonAdminOnly. isAdminEnabled', isAdminEnabled);
     return React.createElement(React.Fragment, null, (!isAdminEnabled || !!props.alwaysVisible) && props.children);
 }
 exports.NonAdminOnly = NonAdminOnly;
