@@ -17,6 +17,5 @@ export function useAdmin(localStorageKeyName?: string): LocalStorageItem<boolean
     typeof localStorageKeyName === 'string' ? localStorageKeyName : 'react-authless-admin',
     false
   );
-  console.log('Rendering useAdmin', val);
   return val;
 }

@@ -23,6 +23,5 @@ export interface NonAdminOnlyProps {
  */
 export function NonAdminOnly(props: NonAdminOnlyProps): JSX.Element {
   const [isAdminEnabled] = useAdmin(props.localStorageKeyName);
-  console.log('Rendering NonAdminOnly. isAdminEnabled', isAdminEnabled);
   return <>{(!isAdminEnabled || !!props.alwaysVisible) && props.children}</>;
 }
