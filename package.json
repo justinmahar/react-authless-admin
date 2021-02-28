@@ -1,6 +1,6 @@
 {
   "name": "react-authless-admin",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "author": "Justin Mahar <contact@justinmahar.com>",
   "description": "Show admin-only content on React sites lacking user authentication.",
   "homepage": "https://justinmahar.github.io/react-authless-admin/",
