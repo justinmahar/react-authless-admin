@@ -49,8 +49,8 @@ export function Demo(): JSX.Element {
             type="text"
             placeholder="Enter the passcode"
             value={enteredPasscode}
-            onChange={e => setEnteredPasscode(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && setIsAdmin(enteredPasscode === PASSCODE)}
+            onChange={(e) => setEnteredPasscode(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && setIsAdmin(enteredPasscode === PASSCODE)}
           />
           <button onClick={() => setIsAdmin(enteredPasscode === PASSCODE)}>Login</button>
           <div>

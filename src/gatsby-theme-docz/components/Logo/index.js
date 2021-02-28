@@ -26,9 +26,7 @@ export const Logo = () => {
                 filter: `drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(1px -1px 0 black)`,
               }}
             />
-          ) : (
-            undefined
-          )}
+          ) : undefined}
           {config.title}
         </div>
       </Link>

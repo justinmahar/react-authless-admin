@@ -1,7 +1,4 @@
-import {
-  useLocalStorageBoolean,
-  LocalStorageItem,
-} from "react-use-window-localstorage";
+import { useLocalStorageBoolean, LocalStorageItem } from 'react-use-window-localstorage';
 
 /**
  *
@@ -15,14 +12,10 @@ import {
  *
  * @param localStorageKeyName Optional. The [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) key name for the admin boolean. Defaults to `react-authless-admin`
  */
-export function useAdmin(
-  localStorageKeyName?: string
-): LocalStorageItem<boolean> {
+export function useAdmin(localStorageKeyName?: string): LocalStorageItem<boolean> {
   const val = useLocalStorageBoolean(
-    typeof localStorageKeyName === "string"
-      ? localStorageKeyName
-      : "react-authless-admin",
-    false
+    typeof localStorageKeyName === 'string' ? localStorageKeyName : 'react-authless-admin',
+    false,
   );
   return val;
 }

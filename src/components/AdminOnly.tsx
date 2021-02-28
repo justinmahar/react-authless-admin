@@ -1,5 +1,5 @@
-import * as React from "react";
-import { useAdmin } from "../hooks/useAdmin";
+import * as React from 'react';
+import { useAdmin } from '../hooks/useAdmin';
 
 export interface AdminOnlyProps {
   /** Children that will only be visible when admin is enabled (via

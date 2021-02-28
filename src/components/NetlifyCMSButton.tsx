@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export interface NetlifyCMSButtonProps {
   /** The name of the collection in Netlify CMS, such as `posts` or `pages`. Will be URI encoded. */
@@ -33,7 +33,7 @@ export function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element {
 
   // If not manually specified with href, build the link to the content,
   // linking as deep as we can given the props provided
-  if (typeof href === "undefined") {
+  if (typeof href === 'undefined') {
     href = `${props.adminRootPath}/#/`;
     if (props.collection) {
       href += `collections/${encodeURIComponent(props.collection)}/`;
@@ -43,9 +43,7 @@ export function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element {
     }
   }
 
-  const linkProps = props.openInNewWindow
-    ? { target: "_blank", rel: "noopener noreferrer" }
-    : undefined;
+  const linkProps = props.openInNewWindow ? { target: '_blank', rel: 'noopener noreferrer' } : undefined;
   const Button = props.component;
   return (
     <a href={href} {...linkProps}>
@@ -56,10 +54,8 @@ export function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element {
 
 NetlifyCMSButton.defaultProps = {
   alwaysVisible: false,
-  adminRootPath: "/admin",
-  component: ({ children, ...rest }: { [x: string]: any }) => (
-    <button {...rest}>{children}</button>
-  ),
-  componentProps: { title: "Edit" },
-  children: "Edit",
+  adminRootPath: '/admin',
+  component: ({ children, ...rest }: { [x: string]: any }) => <button {...rest}>{children}</button>,
+  componentProps: { title: 'Edit' },
+  children: 'Edit',
 };
